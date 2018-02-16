@@ -31,8 +31,8 @@ export default class List extends Component {
         const { shelf, number, name } = this.props;
         return (
             <div>
-                <Link to={`/${url}/${shelf}${number}`}>
-                    { name ? `Bin ${number}` : "+ Add New Bin"}
+                <Link className="list" to={`/${url}/${shelf}${number}`}>
+                    { name ? `Bin ${number}` : "+ Add inventory to bin"}
                 </Link>
             </div>
         )

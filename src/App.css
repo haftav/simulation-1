@@ -1,4 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+
+
 .App {
   text-align: center;
-  background: red;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  width: 100%;
+  background: #AB2A19;
+  height: 111px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  height: 35%;
+  margin-right: 30px;
+}
+
+.header h1 {
+
+}
+
+.home a {
+  display: block;
+  text-decoration: none;
+  width: 500px;
+  background: #D34735;
+  margin: 22px auto;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+  padding-left: 75px;
+}
+
+.list {
+  display: block;
+  text-decoration: none;
+  width: 500px;
+  background: #D34735;
+  margin: 22px auto;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+  padding-left: 75px;  
+}
+
+.list a {
+  text-decoration: none;
+  color: white;
 }

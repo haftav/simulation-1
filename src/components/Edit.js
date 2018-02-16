@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import Header from './Header.js';
+import { Redirect } from 'react-router';
 
 export default class Edit extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ export default class Edit extends Component {
             product: {},
             disabled: true,
             name: '',
-            price: null
+            price: null,
+            redirect: false
         }
 
         this.deleteProduct = this.deleteProduct.bind(this);
@@ -36,6 +38,7 @@ export default class Edit extends Component {
         axios.delete(`/api/bin/${this.props.match.params.id}`).then(res => {
             console.log('I deleted something :(');
             console.log(this.props.match.params.id);
+            this.setState({ redirect: true })
         })
     }
 
@@ -61,6 +64,11 @@ export default class Edit extends Component {
     }
 
     render() {
+        const { redirect } = this.state;
+
+        if (redirect) {
+            return <Redirect to={`/bins/${this.props.match.params.id[0]}`} />
+        }
 
         return (
             <div>
@@ -77,7 +85,7 @@ export default class Edit extends Component {
                     type="number"
                     onChange={(e) => this.handlePriceChange(e.target.value)}/>
                 <button onClick={this.handleClick}>{this.state.disabled ? 'Edit' : 'Save'}</button>
-                <Link to={`/bins/${this.props.match.params.id[0]}`}><button onClick={this.deleteProduct}>Delete</button></Link>
+                <button onClick={this.deleteProduct}>Delete</button>
             </div>
         )
     }
