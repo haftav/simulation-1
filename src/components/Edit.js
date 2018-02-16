@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+import Header from './Header.js';
+
 export default class Edit extends Component {
     constructor(props) {
         super(props);
@@ -62,6 +64,8 @@ export default class Edit extends Component {
 
         return (
             <div>
+                <Header page="shelf" id={this.props.match.params.id} name="edit"/>
+
                 <h1>Name</h1>
                 <input placeholder={this.state.product.name} 
                         disabled={this.state.disabled}

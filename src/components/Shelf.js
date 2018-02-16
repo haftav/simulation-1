@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import List from './List.js';
+import Header from './Header.js';
 
 export default class Shelf extends Component {
     constructor() {
@@ -32,23 +33,13 @@ export default class Shelf extends Component {
         })
         return (
             <div>
-                <h1>SHELF {this.props.match.params.id}</h1>
+
+
+
+                <Header page="shelf" id={this.props.match.params.id} name=""/>
+
                 { bins }
-                {/* <List url="create"  
-                    shelf={this.props.match.params.id}
-                    number="1" />
-                <List url="bin"  
-                    shelf={this.props.match.params.id}
-                    number="2" />
-                <List url="create"  
-                    shelf={this.props.match.params.id}
-                    number="3" />
-                <List url="create"  
-                    shelf={this.props.match.params.id}
-                    number="4" />
-                <List url="create"  
-                    shelf={this.props.match.params.id}
-                    number="5" /> */}
+
 
             </div>
         )

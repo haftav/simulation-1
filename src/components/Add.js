@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+import Header from './Header.js';
+
 export default class Add extends Component {
     constructor(props) {
         super(props);
@@ -36,6 +38,7 @@ export default class Add extends Component {
         console.log(this.props.match.params.id)
         return (
             <div>
+                <Header path="Shelf" id={this.props.match.params.id} name="add"/>
                 <h1>Name</h1>
                 <input onChange={(e) => this.handleNameChange(e.target.value)}/>
                 <h1>Price</h1>

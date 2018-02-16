@@ -10,7 +10,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header page="home" id="" name=""/>
                 <h1>HOME</h1>
                 <Link to="/bins/A">Shelf A</Link>
                 <Link to="/bins/B">Shelf B</Link>
