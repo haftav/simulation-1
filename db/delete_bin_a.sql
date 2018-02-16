@@ -1,0 +1,1 @@
+update shelf_a set name = null, price = null where id = $1
