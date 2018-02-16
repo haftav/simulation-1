@@ -71,21 +71,35 @@ export default class Edit extends Component {
         }
 
         return (
-            <div>
+            <div >
                 <Header page="shelf" id={this.props.match.params.id} name="edit"/>
-
-                <h1>Name</h1>
-                <input placeholder={this.state.product.name} 
-                        disabled={this.state.disabled}
-                        onChange={(e) => this.handleNameChange(e.target.value)}
-                        value={this.state.name}/>
-                <h1>Price</h1>
-                <input placeholder={this.state.product.price} 
-                    disabled={this.state.disabled}
-                    type="number"
-                    onChange={(e) => this.handlePriceChange(e.target.value)}/>
-                <button onClick={this.handleClick}>{this.state.disabled ? 'Edit' : 'Save'}</button>
-                <button onClick={this.deleteProduct}>Delete</button>
+                <div className="edit">
+                    <img src="http://lorempixel.com/200/200/business/" alt="" />
+                    <div className="image-input-wrapper">
+                        <div>
+                            <h1>Name</h1>
+                            <input placeholder={this.state.product.name} 
+                                    disabled={this.state.disabled}
+                                    onChange={(e) => this.handleNameChange(e.target.value)}
+                                    value={this.state.name}/>
+                        </div>
+                        <div>
+                        <h1>Price</h1>
+                            <input placeholder={this.state.product.price} 
+                                disabled={this.state.disabled}
+                                type="number"
+                                onChange={(e) => this.handlePriceChange(e.target.value)}
+                                value={this.state.number}
+                                class="number-input"/>
+                        </div>
+                    </div>
+                    <div className="edit-button-div">
+                        <button 
+                        onClick={this.handleClick}
+                        className={this.state.disabled ? 'edit-button' : 'save-button'}>{this.state.disabled ? 'EDIT' : 'SAVE'}</button>
+                        <button onClick={this.deleteProduct} className="delete-button">DELETE</button>
+                    </div>
+                </div>
             </div>
         )
     }

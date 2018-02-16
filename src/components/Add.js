@@ -45,13 +45,16 @@ export default class Add extends Component {
         }
 
         return (
-            <div>
+            <div className="add-container">
                 <Header path="Shelf" id={this.props.match.params.id} name="add"/>
-                <h1>Name</h1>
-                <input onChange={(e) => this.handleNameChange(e.target.value)}/>
-                <h1>Price</h1>
-                <input type="number" onChange={(e) => this.handlePriceChange(e.target.value)}/>
-                <button onClick={this.addProduct}>+ Add Inventory</button>
+                <img src="http://lorempixel.com/200/200/business/" alt="" />
+                <div className="add">
+                    <h1>Name</h1>
+                    <input onChange={(e) => this.handleNameChange(e.target.value)}/>
+                    <h1>Price</h1>
+                    <input type="number" onChange={(e) => this.handlePriceChange(e.target.value)}/>
+                    <button onClick={this.addProduct} className="save-button">+ Add Inventory</button>
+                </div>
             </div>
         )
     }
