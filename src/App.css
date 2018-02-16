@@ -41,6 +41,7 @@
 
 .header h1 {
   margin: 10px;
+  padding: 0px 20px;
 }
 
 .home a {
@@ -103,10 +104,21 @@
   align-items: center;
 }
 
+.add-page {
+  display: flex;
+  justify-content: center;
+}
+
+.add-page img {
+  margin-top: 85px;
+  margin-right: 25px;
+  height: 200px;
+}
+
 .edit {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .edit h1 {
@@ -114,7 +126,9 @@
 }
 
 .edit img {
-  margin-top: 25px;
+  margin-top: 50px;
+  margin-right: 25px;
+  height: 200px;
 }
 
 .add-container > img {

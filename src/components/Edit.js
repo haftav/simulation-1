@@ -92,13 +92,13 @@ export default class Edit extends Component {
                                 value={this.state.number}
                                 class="number-input"/>
                         </div>
-                    </div>
                     <div className="edit-button-div">
                         <button 
                         onClick={this.handleClick}
                         className={this.state.disabled ? 'edit-button' : 'save-button'}>{this.state.disabled ? 'EDIT' : 'SAVE'}</button>
                         <button onClick={this.deleteProduct} className="delete-button">DELETE</button>
                     </div>
+                </div>
                 </div>
             </div>
         )
