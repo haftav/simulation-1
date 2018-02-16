@@ -24,7 +24,9 @@ export default function Header({ page, id, name }) {
                                 <img src={mainLogo} alt="logo" />
                             </Link>
                             <Link to={`/bins/${id[0]}`}>
-                            <h1>{`Shelf ${id[0]}`}</h1>
+                            <h1>
+                                {`Shelf ${id[0]}`}
+                            </h1>
                             </Link>
                             {
                                 name === "edit"

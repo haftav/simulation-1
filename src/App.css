@@ -12,25 +12,30 @@
 .header {
   width: 100%;
   background: #AB2A19;
-  height: 111px;
   overflow: hidden;
   display: flex;
-  align-items: center;
   color: white;
+  align-items: center;
+  padding: 25px;
+}
+
+.header > div {
+  height: 100%;
 }
 
 .header a {
   text-decoration: none;
   color: white;
+  height: 100%;
 }
 
 .header-info {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .header img {
-  height: 35%;
   margin: 0px 30px;
 }
 
@@ -112,7 +117,7 @@
   margin-top: 25px;
 }
 
-.add-container img {
+.add-container > img {
   margin-top: 25px;
 }
 
